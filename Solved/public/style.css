@@ -1,0 +1,38 @@
+.teal {
+  color: white;
+  background-color: blueviolet;
+
+  padding: 0px 0px 15px 15px;
+  font-family: 'Mali', cursive;
+  font-size: 25px;
+}
+
+.jumbotron-fluid {
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+
+}
+
+.btn-outline-secondary {
+  margin-left: 150px;
+
+}
+.btn-outline-secondary:hover {
+  background-color: blueviolet;
+
+}
+
+.saveNoteForm {
+  justify-content: center;
+  margin: 0px auto;
+  width: 100%;
+  display: inline-grid;
+}
+
+.form-group {
+  width: 400px;
+}
+
+.noteButton {
+position: relative;
+}
