@@ -6,7 +6,12 @@ $('document').ready(() => {
     }).then(function(noteData) {
       $(".notesContent").empty();
       noteData.forEach(element => {
-        $(".notesContent").append('<p>'+JSON.stringify(element)+'</p>')
+        var h = $('<h1>')
+        var p = $('<p>');
+        h.text(element.title)
+        p.text(element.note)
+        $('.notesContent').append(h,p);
+        
       });
 
     console.log(noteData);
