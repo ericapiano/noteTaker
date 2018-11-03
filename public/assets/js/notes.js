@@ -1,7 +1,7 @@
 $('document').ready(() => {
   var runNoteQuery = function() {
     $.ajax({
-      url: "http://localhost:3000/api/notes",
+      url: "/api/notes",
       method: "GET"
     }).then(function(noteData) {
       $(".notesContent").empty();
@@ -25,7 +25,7 @@ $('document').ready(() => {
       title: $("#title").val().trim(),
       note: $("#note").val().trim()
     }
-    $.post("http://localhost:3000/api/notes", newNote).done(function(data){
+    $.post("/api/notes", newNote).done(function(data){
       runNoteQuery();
     })
   });
