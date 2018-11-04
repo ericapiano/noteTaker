@@ -4,13 +4,13 @@ $('document').ready(() => {
       url: "/api/notes",
       method: "GET"
     }).then(function(noteData) {
-      $(".notesContent").empty();
+      $(".card-body").empty();
       noteData.forEach(element => {
         var h = $('<h1>')
         var p = $('<p>');
         h.text(element.title)
         p.text(element.note)
-        $('.notesContent').append(h,p);
+        $('.card-body').append(h,p);
         
       });
 

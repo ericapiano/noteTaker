@@ -1,31 +1,25 @@
 var router = require("express").Router();
 var connection = require("../db/connection");
 
-// Get all tables that aren't waiting
+// Get all the notes submitted
 router.get("/api/notes", function(req, res) {
   connection.query("SELECT * FROM notes", function(err, dbnotes) {
     res.json(dbnotes);
   });
 });
 
-// Save a new table
-// Set isWaiting to true if there are already 5 or more "seated" tables
+// Add a new note to the end of list of existing notes
 router.post("/api/notes", function(req, res) {
-
-
   
     connection.query("INSERT INTO notes SET ?", req.body, function(err, result) {
       if (err) throw err;
-
-      // add 'title: req.body.title' AND 'note: req.body.note'
-
 
       res.json(result);
     });
   });
 
 
-// Clear all tables
+// to delete a note from the list
 router.delete("/api/notes", function(req, res) {
   connection.query("DELETE FROM notes", function(err, result) {
     if (err) throw err;
