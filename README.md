@@ -21,6 +21,7 @@ https://docs.google.com/document/d/1NrCUQyG4SO0GnRpM1kM5oIbVh_co4HyrSYclR_72zco/
 ## Technologies Used
 * Node.js
 * MYSQL NPM Package
+* Bootstrap
 * Sequel Pro
 * Terminal
 * Heroku
