@@ -6,7 +6,7 @@ $('document').ready(() => {
     }).then(function(noteData) {
       $(".card-body").empty();
       noteData.forEach(element => {
-        var h = $('<h1>')
+        var h = $('<h2>')
         var p = $('<p>');
         h.text(element.title)
         p.text(element.note)
