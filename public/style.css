@@ -13,10 +13,6 @@
 
 }
 
-.btn-outline-secondary {
-  margin-left: 150px;
-
-}
 .btn-outline-secondary:hover {
   background-color: blueviolet;
 
@@ -51,4 +47,8 @@ position: relative;
   border: 2px dashed blueviolet;
   margin-left: 35%;
 
+}
+
+.fa-trash-alt {
+  color: red;
 }

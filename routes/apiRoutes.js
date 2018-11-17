@@ -20,8 +20,8 @@ router.post("/api/notes", function(req, res) {
 
 
 // to delete a note from the list
-router.delete("/api/notes", function(req, res) {
-  connection.query("DELETE FROM notes", function(err, result) {
+router.delete("/api/notesDelete", function(req, res) {
+  connection.query("DELETE FROM notes WHERE id = ?", req.body.id, function(err, result) {
     if (err) throw err;
     res.json(result);
   });

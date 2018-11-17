@@ -8,9 +8,19 @@ $('document').ready(() => {
       noteData.forEach(element => {
         var h = $('<h2>')
         var p = $('<p>');
+        var b = $('<button>')
+
+{/* <i class="fas fa-trash-alt float-right text-danger delete-note"></i> */}
+
+
+
         h.text(element.title)
         p.text(element.note)
-        $('.card-body').append(h,p);
+        // b.attr("class", "fas fa-trash-alt float-right text-danger delete-note")
+        b.attr("data-value", element.id)
+        b.attr("class", "delete-button")
+        $('.card-body').append(h,p,b);
+
         
       });
 
@@ -29,6 +39,26 @@ $('document').ready(() => {
       runNoteQuery();
     })
   });
+
+
+
+  // Delete the clicked note
+
+$(document).on('click', '.delete-button', function (event) {
+event.preventDefault();
+var note = $(this).attr("data-value")
+console.log(note)
+
+$.ajax({
+  url: "/api/notesDelete",
+  method: "DELETE",
+  data: {id: note}
+}).then(function() {
+  location.reload();
+});
+
+
+});
 
     
   runNoteQuery();
