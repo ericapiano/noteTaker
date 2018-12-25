@@ -1,6 +1,10 @@
 # Note Taker
 In this activity I built a Node, Express, and MySQL powered note-taking application. The user will have the ability to create, read, and delete notes from a MySQL database.
 
+## Demo Link
+
+https://glacial-garden-58594.herokuapp.com/
+
 ## Getting Started
 * Clone repo
 * Run `npm install` to install the required dependencies.
@@ -13,15 +17,9 @@ In this activity I built a Node, Express, and MySQL powered note-taking applicat
 * Each note added will gain a 'delete' button, which provides the user the ability to delete a note.
 
 
-## Demo Link
-
-https://glacial-garden-58594.herokuapp.com/
-
-
 ## Technologies Used
-* Node.js
+* Node.JS
 * MYSQL NPM Package
-* Bootstrap
 * Bootstrap
 * Sequelize
 
